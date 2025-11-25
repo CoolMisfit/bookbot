@@ -13,3 +13,8 @@ def get_num_chars(text):
             else:
                 char_count[char] = 1
     return char_count
+
+
+def sorted_list(num_chars):
+    def sort_on(num_chars):
+        return num_chars["num"]
