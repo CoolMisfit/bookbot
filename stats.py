@@ -15,6 +15,22 @@ def get_num_chars(text):
     return char_count
 
 
-def sorted_list(num_chars):
-    def sort_on(num_chars):
-        return num_chars["num"]
+def sort_on(items):
+    return items["num"]
+
+
+def get_sorted(num_chars):
+    dict_list = []
+    for i, j in num_chars.items():
+        dict_list.append({"char": i, "num": j})
+    dict_list.sort(reverse=True, key=sort_on)
+    return dict_list
+
+
+# BOOT.DEV Solution
+# def chars_dict_to_sorted_list(num_chars_dict):
+#     sorted_list = []
+#     for ch in num_chars_dict:
+#         sorted_list.append({"char": ch, "num": num_chars_dict[ch]})
+#     sorted_list.sort(reverse=True, key=sort_on)
+#     return sorted_list
